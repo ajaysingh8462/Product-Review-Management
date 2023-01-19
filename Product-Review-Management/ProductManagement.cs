@@ -19,5 +19,33 @@ namespace Product_Review_Management
                     + list.Rating + " Review " + list.Review + " IsLike " + list.IsLike);
             }
         }
+        public static void AllRecord(List<Products> productsReviewList)
+        {
+            var productdata = (from reviewlist in productsReviewList
+                               where reviewlist.Rating > 3
+                               select reviewlist);
+
+                               
+            foreach (var list in productdata)
+            {
+                Console.WriteLine("ProdcutID " + list.productID + " UserId " + list.UserId + " Rating "
+                    + list.Rating + " Review " + list.Review + " IsLike " + list.IsLike);
+            }
+
+        }
+        public static void RetriveFromProductId(List<Products> productsReviewList)
+        {
+            var productdata = (from reviewlist in productsReviewList
+                               where reviewlist.productID ==1 || reviewlist.productID==4 || reviewlist.productID==9
+                               select reviewlist);
+
+
+            foreach (var list in productdata)
+            {
+                Console.WriteLine("ProdcutID " + list.productID + " UserId " + list.UserId + " Rating "
+                    + list.Rating + " Review " + list.Review + " IsLike " + list.IsLike);
+            }
+
+        }
     }
 }
