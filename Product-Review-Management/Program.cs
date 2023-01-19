@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,6 +42,14 @@ namespace Product_Review_Management
 
 
             };
+            Console.WriteLine("Enter Option\n1.Top 3data with high rating");
+            int op=Convert.ToInt16(Console.ReadLine());
+            switch (op)
+            {
+                case 1:
+                    ProductManagement.Top3Records(products);
+                    break;
+            }
             
         }
     }
