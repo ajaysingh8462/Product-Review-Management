@@ -65,6 +65,9 @@ namespace Product_Review_Management
                 case 3:
                     Count.CountOfProduct(products);
                     break;
+                case 4:
+                    ProductManagement.RetriveProductIdAndReview(products);
+                    break;
                    
             }
             

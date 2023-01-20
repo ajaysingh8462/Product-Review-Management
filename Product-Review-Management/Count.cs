@@ -16,7 +16,7 @@ namespace Product_Review_Management
             foreach (var val in res)
             {
 
-                Console.WriteLine("Group By Review: {0}", "Count of Review{1}", val.Key);             
+                Console.WriteLine("Group By Review: {0}", val.Key);             
 
                 foreach (Products C in val)
                 {
