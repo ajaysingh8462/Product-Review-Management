@@ -42,7 +42,7 @@ namespace Product_Review_Management
 
 
             };
-            Console.WriteLine("Enter Option\n1.Top3 data with high rating\n2.Retrive data from list\n3.Count of review present for each id");
+            Console.WriteLine("Enter Option\n1.Top3 data with high rating\n2.Retrive data from list\n3.Count of review present for each id\n4.Retreive prodectid and review\n5.Skip Top 5 ");
             int op=Convert.ToInt16(Console.ReadLine());
             switch (op)
             {
@@ -67,6 +67,9 @@ namespace Product_Review_Management
                     break;
                 case 4:
                     ProductManagement.RetriveProductIdAndReview(products);
+                    break;
+                    case 5:
+                    ProductManagement.SkipTop5(products);
                     break;
                    
             }
